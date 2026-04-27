@@ -1,0 +1,24 @@
+.admin-team { display: flex; flex-direction: column; gap: 24px; }
+
+.team-admin-grid {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(260px, 1fr)); gap: 14px;
+}
+.team-admin-card { display: flex; align-items: center; gap: 14px; padding: 16px; }
+.tac-avatar {
+  width: 48px; height: 48px; border-radius: 50%;
+  background: var(--blue-primary); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 1rem; flex-shrink: 0;
+}
+.tac-info { flex: 1; min-width: 0; }
+.tac-info h3 { font-size: 0.95rem; margin: 0 0 2px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.tac-title { font-size: 0.78rem; color: var(--text-secondary); margin: 0 0 6px; }
+.badge-founder { background: #fef3c7; color: #d97706; }
+.badge-board { background: #ede9fe; color: #7c3aed; }
+.badge-staff { background: var(--blue-light); color: var(--blue-primary); }
+.tac-actions { display: flex; flex-direction: column; gap: 6px; flex-shrink: 0; }
+
+.team-editor { max-width: 680px; }
+.team-editor .editor-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 24px; }
+.team-editor h2 { font-size: 1.4rem; margin: 0; }
+.team-form { display: flex; flex-direction: column; gap: 18px; }
