@@ -1,0 +1,35 @@
+.admin-users { display: flex; flex-direction: column; gap: 24px; }
+
+.user-avatar-sm {
+  width: 32px; height: 32px; border-radius: 50%;
+  background: var(--blue-primary); color: var(--white);
+  display: flex; align-items: center; justify-content: center;
+  font-weight: 700; font-size: 0.85rem; flex-shrink: 0;
+}
+.you-badge {
+  padding: 2px 8px; border-radius: 50px;
+  background: #d1fae5; color: #065f46;
+  font-size: 0.72rem; font-weight: 700;
+}
+.status-dot {
+  display: inline-block; width: 8px; height: 8px;
+  border-radius: 50%; margin-right: 6px;
+}
+.status-dot.active { background: #22c55e; }
+.badge-admin { background: #fef3c7; color: #d97706; }
+.badge-editor { background: var(--blue-light); color: var(--blue-primary); }
+
+.permissions-card h3 {
+  display: flex; align-items: center; gap: 8px;
+  margin: 0 0 16px; font-size: 1rem;
+}
+.perm-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+.perm-col h4 { font-size: 0.9rem; margin: 0 0 10px; color: var(--black); }
+.perm-col ul { list-style: none; padding: 0; margin: 0; display: flex; flex-direction: column; gap: 6px; }
+.perm-col li { font-size: 0.85rem; color: var(--text-secondary); }
+
+.success-banner {
+  background: #d1fae5; border: 1px solid #6ee7b7;
+  border-radius: 10px; padding: 14px 20px;
+  color: #065f46; font-weight: 600; font-size: 0.9rem;
+}
