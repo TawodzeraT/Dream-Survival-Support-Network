@@ -1,0 +1,50 @@
+.program-page { padding-top: 80px; }
+.program-hero { padding: 80px 0 60px; color: var(--white); }
+.ph-inner { text-align: center; }
+.ph-icon { font-size: 4rem; margin: 16px 0; }
+.program-hero h1 { font-size: clamp(2rem, 5vw, 3.2rem); margin-bottom: 12px; }
+.program-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.7); }
+
+.program-stats-bar { background: var(--blue-primary); }
+.psb-inner { display: flex; justify-content: center; gap: 0; flex-wrap: wrap; }
+.psb-stat {
+  display: flex; flex-direction: column; align-items: center;
+  padding: 28px 48px; border-right: 1px solid rgba(255,255,255,0.2);
+}
+.psb-stat:last-child { border-right: none; }
+.psb-stat strong { font-size: 2rem; font-family: var(--font-mono); color: var(--white); font-weight: 700; }
+.psb-stat span { font-size: 0.8rem; color: rgba(255,255,255,0.75); text-transform: uppercase; letter-spacing: 0.08em; margin-top: 4px; }
+
+.program-body { padding: 80px 0; background: var(--white); }
+.pb-grid { display: grid; grid-template-columns: 1fr 320px; gap: 48px; align-items: start; }
+.pb-main h2 { font-size: 1.8rem; margin-bottom: 20px; }
+.pb-main p { color: var(--text-secondary); line-height: 1.8; margin-bottom: 16px; }
+.impact-box {
+  display: flex; align-items: flex-start; gap: 12px;
+  background: var(--blue-light); border: 1px solid #bfdbfe;
+  border-radius: 12px; padding: 20px 24px; margin-top: 28px;
+  color: var(--blue-primary);
+}
+.impact-box p { color: var(--blue-primary); margin: 0; font-weight: 600; }
+
+.sidebar-card { background: var(--bg-light); border-radius: 16px; padding: 24px; margin-bottom: 20px; border: 1px solid var(--border); }
+.sidebar-card h3 { font-size: 1rem; margin-bottom: 16px; }
+.sidebar-link {
+  display: flex; align-items: center; gap: 10px;
+  padding: 12px; border-radius: 10px; text-decoration: none;
+  color: inherit; transition: background 0.2s; margin-bottom: 6px;
+}
+.sidebar-link:hover { background: var(--white); }
+.sidebar-link > span { font-size: 1.4rem; flex-shrink: 0; }
+.sidebar-link > svg { margin-left: auto; color: var(--text-secondary); flex-shrink: 0; }
+.sl-name { font-size: 0.88rem; font-weight: 600; margin: 0; }
+.sl-desc { font-size: 0.78rem; color: var(--text-secondary); margin: 2px 0 0; }
+.sidebar-donate { background: var(--black); border-radius: 16px; padding: 24px; color: var(--white); }
+.sidebar-donate h3 { color: var(--white); font-size: 1rem; margin-bottom: 10px; }
+.sidebar-donate p { color: rgba(255,255,255,0.65); font-size: 0.88rem; margin-bottom: 16px; }
+
+.program-cta { background: linear-gradient(135deg, var(--blue-primary), #1245b8); padding: 80px 0; text-align: center; color: var(--white); }
+.program-cta h2 { font-size: 2rem; margin-bottom: 12px; }
+.program-cta p { color: rgba(255,255,255,0.75); margin-bottom: 28px; }
+
+@media (max-width: 900px) { .pb-grid { grid-template-columns: 1fr; } .psb-stat { padding: 20px 24px; } }
