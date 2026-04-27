@@ -1,0 +1,55 @@
+.admin-donations { display: flex; flex-direction: column; gap: 24px; }
+
+.success-banner {
+  background: #d1fae5; border: 1px solid #6ee7b7;
+  border-radius: 10px; padding: 14px 20px;
+  color: #065f46; font-weight: 600; font-size: 0.9rem;
+}
+
+.counter-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 16px;
+}
+.counter-card { display: flex; flex-direction: column; gap: 16px; }
+.counter-card-head { display: flex; align-items: center; gap: 12px; }
+.cc-icon {
+  width: 44px; height: 44px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center; flex-shrink: 0;
+}
+.cc-label { font-size: 0.85rem; font-weight: 700; color: var(--black); margin: 0; }
+.cc-current { font-size: 0.78rem; color: var(--text-secondary); margin: 2px 0 0; }
+.cc-input-wrap { display: flex; align-items: center; gap: 10px; }
+.cc-input {
+  flex: 1; padding: 10px 14px;
+  font-size: 1.3rem; font-family: var(--font-mono);
+  font-weight: 700; text-align: center;
+  border: 2px solid var(--border); border-radius: 10px; outline: none;
+}
+.cc-input:focus { border-color: var(--blue-primary); }
+.cc-nudge { display: flex; flex-direction: column; gap: 4px; }
+.cc-nudge button {
+  padding: 4px 8px; border-radius: 6px;
+  border: 1px solid var(--border); background: var(--bg-light);
+  font-size: 0.75rem; font-weight: 600; cursor: pointer;
+  transition: all 0.15s; color: var(--text-secondary);
+}
+.cc-nudge button:hover { background: var(--blue-primary); color: var(--white); border-color: var(--blue-primary); }
+.cc-diff {
+  display: flex; align-items: center; gap: 4px;
+  font-size: 0.8rem; font-weight: 700; margin: 0;
+  font-family: var(--font-mono);
+}
+
+.tier-section h3 { margin: 0 0 4px; font-size: 1.1rem; }
+.tier-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 12px; }
+.tier-card {
+  padding: 16px; border-radius: 10px;
+  border: 2px dashed var(--border); background: var(--bg-light);
+  text-align: center; cursor: pointer;
+  display: flex; flex-direction: column; gap: 4px; transition: all 0.2s;
+}
+.tier-card:hover { border-color: var(--blue-primary); background: var(--blue-light); }
+.tier-label { font-size: 1rem; font-weight: 700; color: var(--black); }
+.tier-desc { font-size: 0.8rem; color: var(--text-secondary); }
+.tier-impact { font-size: 0.82rem; font-weight: 700; color: var(--blue-primary); font-family: var(--font-mono); }
