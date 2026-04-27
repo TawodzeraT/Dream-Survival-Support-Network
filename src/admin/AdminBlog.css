@@ -1,0 +1,67 @@
+/* Shared admin table */
+.admin-table { width: 100%; border-collapse: collapse; }
+.admin-table th {
+  text-align: left; font-size: 0.78rem; font-weight: 700;
+  color: var(--text-secondary); text-transform: uppercase;
+  letter-spacing: 0.05em; padding: 8px 12px;
+  border-bottom: 2px solid var(--border);
+}
+.admin-table td {
+  padding: 14px 12px; border-bottom: 1px solid var(--border);
+  font-size: 0.88rem; color: var(--text-primary); vertical-align: middle;
+}
+.admin-table tr:last-child td { border-bottom: none; }
+.admin-table tr:hover td { background: var(--bg-light); }
+.post-title-cell { font-weight: 600; max-width: 300px; }
+.action-cell { display: flex; gap: 8px; align-items: center; }
+
+.badge {
+  display: inline-block; padding: 3px 10px; border-radius: 50px;
+  font-size: 0.72rem; font-weight: 700; text-transform: uppercase;
+  background: var(--blue-light); color: var(--blue-primary);
+  letter-spacing: 0.04em;
+}
+
+.icon-btn {
+  width: 32px; height: 32px; border-radius: 8px;
+  border: 1px solid var(--border); background: transparent;
+  display: inline-flex; align-items: center; justify-content: center;
+  cursor: pointer; color: var(--text-secondary); transition: all 0.2s;
+}
+.icon-btn:hover { border-color: var(--blue-primary); color: var(--blue-primary); background: var(--blue-light); }
+.icon-btn.del:hover { border-color: #dc2626; color: #dc2626; background: #fef2f2; }
+
+/* Modal */
+.modal-overlay {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(0,0,0,0.6); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+}
+.modal-box {
+  background: var(--white); border-radius: 16px;
+  padding: 32px; max-width: 380px; width: 90%;
+  text-align: center; box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.modal-box h3 { font-size: 1.2rem; margin: 0 0 8px; }
+.modal-box p { color: var(--text-secondary); margin: 0 0 24px; }
+.modal-btns { display: flex; gap: 12px; justify-content: center; }
+.modal-btns .btn { min-width: 100px; }
+
+/* Blog editor */
+.admin-blog { display: flex; flex-direction: column; gap: 24px; }
+.blog-editor { display: flex; flex-direction: column; gap: 20px; }
+.editor-header {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 12px;
+}
+.editor-header h1 { font-size: 1.6rem; margin: 0; }
+.editor-actions { display: flex; align-items: center; gap: 10px; }
+.editor-form { display: flex; flex-direction: column; gap: 20px; }
+.form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+.form-group-sm { max-width: 200px; }
+.blog-preview { max-width: 720px; }
+.blog-preview h2 { font-size: 1.6rem; margin: 12px 0 8px; }
+.preview-meta { color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 16px; }
+.preview-excerpt { color: var(--text-secondary); font-style: italic; margin-bottom: 20px; border-left: 3px solid var(--blue-primary); padding-left: 12px; }
+
+@media (max-width: 600px) { .form-row { grid-template-columns: 1fr; } .form-group-sm { max-width: 100%; } }
