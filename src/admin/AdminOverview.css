@@ -1,0 +1,64 @@
+.admin-overview { display: flex; flex-direction: column; gap: 28px; }
+
+.overview-welcome {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.overview-welcome h1 { font-size: 1.8rem; margin: 0; }
+.overview-welcome p { color: var(--text-secondary); margin: 4px 0 0; }
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+}
+.stat-card {
+  background: var(--white); border-radius: 14px;
+  border: 1px solid var(--border); padding: 20px;
+  display: flex; align-items: flex-start; gap: 16px;
+  box-shadow: var(--shadow-sm); transition: box-shadow 0.2s;
+}
+.stat-card:hover { box-shadow: var(--shadow-md); }
+.stat-icon {
+  width: 48px; height: 48px; border-radius: 12px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.stat-label { font-size: 0.8rem; color: var(--text-secondary); margin: 0; font-weight: 500; }
+.stat-value { font-size: 1.8rem; font-weight: 700; margin: 4px 0; color: var(--black); font-family: var(--font-mono); }
+.stat-change { font-size: 0.75rem; color: #059669; margin: 0; }
+
+.overview-bottom { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.quick-links h3, .recent-posts h3 { font-size: 1.1rem; margin: 0 0 20px; }
+.ql-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; }
+.ql-item {
+  display: flex; align-items: center; gap: 12px;
+  padding: 14px; border-radius: 10px;
+  border: 1px solid var(--border); text-decoration: none;
+  transition: all 0.2s; background: var(--bg-light);
+}
+.ql-item:hover { border-color: var(--blue-primary); background: var(--blue-light); transform: translateY(-2px); }
+.ql-icon {
+  width: 40px; height: 40px; border-radius: 10px;
+  display: flex; align-items: center; justify-content: center;
+  flex-shrink: 0;
+}
+.ql-label { font-size: 0.85rem; font-weight: 600; color: var(--black); margin: 0; }
+.ql-desc { font-size: 0.75rem; color: var(--text-secondary); margin: 2px 0 0; }
+
+.recent-post-item {
+  display: flex; align-items: flex-start; gap: 12px;
+  padding: 12px 0; border-bottom: 1px solid var(--border);
+}
+.recent-post-item:last-of-type { border-bottom: none; }
+.rp-dot {
+  width: 8px; height: 8px; border-radius: 50%;
+  background: var(--blue-primary); flex-shrink: 0; margin-top: 6px;
+}
+.rp-title { font-size: 0.88rem; font-weight: 600; color: var(--black); margin: 0; }
+.rp-date { font-size: 0.75rem; color: var(--text-secondary); margin: 2px 0 0; }
+.view-all-link { display: inline-block; margin-top: 16px; font-size: 0.85rem; color: var(--blue-primary); text-decoration: none; font-weight: 600; }
+
+@media (max-width: 900px) { .overview-bottom { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .ql-grid { grid-template-columns: 1fr; } }
