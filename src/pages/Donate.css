@@ -1,0 +1,100 @@
+.donate-page { padding-top: 80px; }
+.donate-hero {
+  background: linear-gradient(135deg, #050d1a 0%, #0a1628 60%, #1a3a6b 100%);
+  padding: 80px 0 60px; color: var(--white); text-align: center;
+}
+.donate-hero h1 { font-size: clamp(2rem,5vw,3rem); margin-bottom: 12px; }
+.donate-hero p { color: rgba(255,255,255,0.7); font-size: 1.1rem; }
+
+.donate-body { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; padding: 80px 24px; align-items: start; }
+
+.donate-left h2 { font-size: 1.5rem; margin-bottom: 24px; }
+.tiers-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
+.tier-btn {
+  display: flex; flex-direction: column; align-items: center; gap: 4px;
+  padding: 16px 12px; border-radius: 12px; border: 2px solid var(--border);
+  background: var(--white); cursor: pointer; transition: all 0.2s; text-align: center;
+}
+.tier-btn:hover { border-color: var(--blue-primary); }
+.tier-btn.active { border-color: var(--blue-primary); background: var(--blue-light); }
+.tier-emoji { font-size: 1.6rem; }
+.tier-name { font-size: 0.78rem; font-weight: 700; color: var(--text-secondary); text-transform: uppercase; letter-spacing: 0.05em; }
+.tier-amount { font-size: 1.2rem; font-weight: 700; color: var(--black); font-family: var(--font-mono); }
+.tier-impact-text { font-size: 0.72rem; color: var(--text-secondary); }
+
+.quick-amounts { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: 16px; }
+.qa-btn { padding: 8px 16px; border-radius: 50px; border: 1.5px solid var(--border); background: transparent; cursor: pointer; font-size: 0.88rem; font-weight: 600; transition: all 0.2s; }
+.qa-btn:hover,.qa-btn.active { background: var(--blue-primary); border-color: var(--blue-primary); color: var(--white); }
+
+.custom-amount { margin-bottom: 28px; }
+.custom-amount label { font-size: 0.85rem; font-weight: 600; display: block; margin-bottom: 6px; }
+.custom-input-wrap { display: flex; align-items: center; border: 1.5px solid var(--border); border-radius: 8px; overflow: hidden; }
+.custom-input-wrap span { padding: 0 12px; font-weight: 700; color: var(--text-secondary); background: var(--bg-light); border-right: 1.5px solid var(--border); height: 44px; display: flex; align-items: center; }
+.custom-input-wrap input { border: none; flex: 1; padding: 11px 14px; font-size: 0.95rem; outline: none; }
+
+.impact-bars h3 { font-size: 1rem; margin-bottom: 14px; }
+.impact-bar-item { margin-bottom: 12px; }
+.ib-label { display: flex; justify-content: space-between; font-size: 0.82rem; margin-bottom: 5px; color: var(--text-secondary); }
+.ib-track { height: 8px; background: var(--border); border-radius: 50px; }
+.ib-fill { height: 100%; border-radius: 50px; transition: width 0.5s ease; }
+
+/* MONITOR */
+.donate-right { display: flex; justify-content: center; align-items: flex-start; padding-top: 20px; }
+.monitor-wrap { display: flex; flex-direction: column; align-items: center; }
+.monitor-bezel {
+  background: #1c1c1e; border-radius: 16px;
+  padding: 16px; border: 3px solid #2a2a2e;
+  box-shadow: 0 0 0 1px #111, 0 20px 60px rgba(0,0,0,0.4);
+  width: 380px;
+}
+.monitor-screen {
+  background: #0d1117; border-radius: 8px;
+  padding: 20px; min-height: 480px;
+  border: 1px solid #1a56db33;
+}
+.form-screen-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 20px; padding-bottom: 12px;
+  border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+.screen-dots { display: flex; gap: 5px; }
+.screen-dots span { width: 10px; height: 10px; border-radius: 50%; background: #333; }
+.screen-dots span:nth-child(1) { background: #ff5f57; }
+.screen-dots span:nth-child(2) { background: #ffbd2e; }
+.screen-dots span:nth-child(3) { background: #28ca41; }
+.form-screen-header > span:nth-child(2) { font-size: 0.78rem; color: rgba(255,255,255,0.5); font-family: var(--font-mono); }
+
+.donation-summary { text-align: center; margin-bottom: 18px; }
+.ds-label { display: block; font-size: 0.72rem; color: rgba(255,255,255,0.4); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-mono); }
+.ds-amount { display: block; font-size: 2.4rem; font-family: var(--font-mono); color: #4ade80; font-weight: 500; }
+
+.freq-tabs { display: flex; gap: 4px; margin-bottom: 14px; background: rgba(255,255,255,0.04); border-radius: 8px; padding: 3px; }
+.freq-tab { flex: 1; padding: 7px; border: none; background: transparent; border-radius: 6px; font-size: 0.78rem; cursor: pointer; color: rgba(255,255,255,0.45); font-family: var(--font-body); transition: all 0.15s; }
+.freq-tab.active { background: var(--blue-primary); color: var(--white); font-weight: 600; }
+
+.pay-tabs { display: flex; gap: 6px; margin-bottom: 16px; }
+.pay-tab { flex: 1; padding: 8px; border: 1px solid rgba(255,255,255,0.1); border-radius: 7px; background: transparent; color: rgba(255,255,255,0.45); font-size: 0.78rem; cursor: pointer; font-family: var(--font-body); display: flex; align-items: center; justify-content: center; gap: 5px; transition: all 0.15s; }
+.pay-tab.active { border-color: var(--blue-primary); color: var(--white); background: rgba(26,86,219,0.15); }
+
+.donate-form { display: flex; flex-direction: column; gap: 10px; }
+.donate-form .form-group label { color: rgba(255,255,255,0.55); font-size: 0.78rem; }
+.donate-form .form-group input {
+  background: rgba(255,255,255,0.05); border-color: rgba(255,255,255,0.1);
+  color: var(--white); font-size: 0.88rem; padding: 9px 12px;
+}
+.donate-form .form-group input:focus { border-color: var(--blue-primary); background: rgba(26,86,219,0.1); }
+.donate-form .form-group input::placeholder { color: rgba(255,255,255,0.25); }
+.form-row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 8px; }
+.donate-submit { width: 100%; justify-content: center; margin-top: 8px; }
+
+.monitor-neck { width: 60px; height: 24px; background: #1c1c1e; clip-path: polygon(20% 0%, 80% 0%, 100% 100%, 0% 100%); }
+.monitor-base { width: 160px; height: 12px; background: #1c1c1e; border-radius: 0 0 8px 8px; }
+
+.donate-success-page { display: flex; align-items: center; justify-content: center; min-height: 80vh; }
+.success-box { text-align: center; max-width: 440px; padding: 48px; }
+.success-icon { color: #22c55e; margin: 0 auto 20px; }
+.success-box h1 { font-size: 2.2rem; margin-bottom: 16px; }
+.success-box p { color: var(--text-secondary); margin-bottom: 12px; }
+.tax-note { font-size: 0.82rem; font-style: italic; }
+
+@media (max-width: 1000px) { .donate-body { grid-template-columns: 1fr; } .monitor-bezel { width: 100%; max-width: 420px; } }
