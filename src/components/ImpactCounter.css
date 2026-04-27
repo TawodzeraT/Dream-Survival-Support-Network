@@ -1,0 +1,43 @@
+.counter-section { padding: 100px 0; background: var(--black); }
+.counter-header { text-align: center; margin-bottom: 60px; }
+.counter-header .section-title { color: var(--white); }
+.counter-header .section-subtitle { color: rgba(255,255,255,0.6); margin: 0 auto; }
+
+.counter-screen { max-width: 860px; margin: 0 auto; }
+.screen-bezel {
+  background: #0d1117; border-radius: 16px;
+  border: 2px solid #1a56db44;
+  box-shadow: 0 0 60px rgba(26,86,219,0.2), inset 0 0 40px rgba(0,0,0,0.5);
+  padding: 24px; position: relative; overflow: hidden;
+}
+.screen-scanlines {
+  position: absolute; inset: 0; pointer-events: none; z-index: 1;
+  background: repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,0,0,0.03) 2px, rgba(0,0,0,0.03) 4px);
+}
+.screen-content { position: relative; z-index: 2; }
+.screen-header {
+  display: flex; align-items: center; gap: 6px;
+  margin-bottom: 32px; padding-bottom: 16px;
+  border-bottom: 1px solid rgba(26,86,219,0.2);
+}
+.screen-dot { width: 12px; height: 12px; border-radius: 50%; }
+.screen-dot.red { background: #ff5f57; }
+.screen-dot.yellow { background: #ffbd2e; }
+.screen-dot.green { background: #28ca41; }
+.screen-title { font-family: var(--font-mono); font-size: 0.8rem; color: rgba(26,86,219,0.7); margin-left: 8px; }
+
+.counter-grid { display: grid; grid-template-columns: repeat(4,1fr); gap: 24px; }
+.counter-item { text-align: center; padding: 20px 10px; }
+.counter-icon { font-size: 2rem; margin-bottom: 12px; }
+.counter-number {
+  font-family: var(--font-mono); font-size: clamp(1.8rem, 3vw, 2.8rem);
+  font-weight: 500; color: #4ade80;
+  text-shadow: 0 0 20px rgba(74,222,128,0.4);
+  margin-bottom: 8px; line-height: 1;
+}
+.counter-label { font-size: 0.78rem; color: rgba(255,255,255,0.5); text-transform: uppercase; letter-spacing: 0.1em; font-family: var(--font-mono); }
+.screen-cursor { color: #4ade80; font-size: 1.2rem; margin-top: 20px; animation: blink 1s step-end infinite; }
+@keyframes blink { 0%,100% { opacity: 1; } 50% { opacity: 0; } }
+
+@media (max-width: 700px) { .counter-grid { grid-template-columns: repeat(2,1fr); } }
+@media (max-width: 400px) { .counter-grid { grid-template-columns: 1fr 1fr; gap: 16px; } }
